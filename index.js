@@ -1,4 +1,34 @@
 const readlineSync = require('readline-sync');
+const fs = require('fs');
+
+
+function nonInteractiveMode(args) {
+    const filename = args[0];
+
+    try {
+        const dataInput = fs.readFileSync(filename, 'utf8').trim().split(" ");
+
+        if(dataInput.length !== 3) {
+            throw new Error(`Invalid input in file: Expected 3 numbers, got ${data.length} numbers`);
+        }
+        const a = parseFloat(dataInput[0]);
+        const b = parseFloat(dataInput[1]);
+        const c = parseFloat(dataInput[2]);
+
+        if(a === 0.0) {
+            console.log('Error: "a" coefficient cannot be 0');
+            process.exit(1);
+        } else if(isNaN(a) || isNaN(b) || isNaN(c)) {
+            console.log('Error. Enter a valid number')
+            process.exit(1);
+        }
+
+        solveQuadEquation(a, b, c);
+        } catch (error) {
+        console.log(`File: ${filename} doesn't exist`);
+        process.exit(1);
+    }
+}
 
 function checkInput(message) {
     while (true) {
