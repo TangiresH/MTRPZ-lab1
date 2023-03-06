@@ -1,3 +1,18 @@
+function interactiveMode() {
+    let a;
+
+    do {
+        a = checkInput('a = ');
+        if (a === 0.0) {
+            console.log('Error: "a" coefficient cannot be zero');
+        }
+    } while (a === 0.0)
+    const b = checkInput('b = ');
+    const c = checkInput('c = ');
+
+    solveQuadEquation(a, b, c);
+}
+
 function solveQuadEquation (a, b, c) {
     const discr = b * b - 4.0 * a * c;
     const sqrtDiscr = Math.sqrt(Math.abs(discr));
