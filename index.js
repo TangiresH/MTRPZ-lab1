@@ -1,3 +1,18 @@
+const readlineSync = require('readline-sync');
+
+function checkInput(message) {
+    while (true) {
+        const input = readlineSync.question(message);
+        const parsedInput = parseFloat(input);
+
+        if(!isNaN(parsedInput)) {
+            return parsedInput;
+        }
+
+        console.log(`Error. Expected a valid real number, got ${input} invalid instead`);
+    }
+}
+
 function interactiveMode() {
     let a;
 
