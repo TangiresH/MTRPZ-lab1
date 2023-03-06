@@ -78,11 +78,10 @@ function solveQuadEquation (a, b, c) {
     console.log(`Equation is: (${a}) x^2 + (${b}) x + (${c}) = 0`);
 
     if(discr < 0) {
-        console.log('No real roots');
+        console.log('There are 0 roots');
     } else if(discr > 0) {
-        console.log(`x1: ${x1}`);
-        console.log(`x2: ${x2}`);
+        console.log(`There are 2 roots\nx1 = ${x1.toFixed(1)}\nx2 = ${x2.toFixed(1)}`)
     } else {
-        console.log(`x1: ${x1}`);
+        console.log(`There are 1 roots \nx1 = ${x1.toFixed(1)}`);
     }
 }
