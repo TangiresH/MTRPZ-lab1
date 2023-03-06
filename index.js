@@ -2,6 +2,17 @@ const readlineSync = require('readline-sync');
 const fs = require('fs');
 
 
+main(process.argv.slice(2));
+
+
+function main(args) {
+    if(args.length === 0) {
+        interactiveMode();
+    } else {
+        nonInteractiveMode(args);
+    }
+}
+
 function nonInteractiveMode(args) {
     const filename = args[0];
 
