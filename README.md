@@ -47,5 +47,9 @@ The input file should contain three numbers separated by a space. Each number re
 
 Note: If an error occurs, the program exits with an error code of 1.
 
+## Reverted commit link:
+
+### [revert commit](https://github.com/TangiresH/MTRPZ-lab1/commit/c0c9815a660a1a7334660875b22ae840b3bda322)
+
 
 
